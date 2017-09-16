@@ -26,10 +26,13 @@ janela = Tk()
 janela.geometry("800x500+400+100")
 janela.title("Editor de Texto")
 
-texto = Text(janela, font=("arial", 11), bg="#333333", fg="silver")
+frame_texto = Frame(janela)
+frame_texto.pack(expand=YES, fill=BOTH)
+
+texto = Text(frame_texto, font=("arial", 11), bg="#333333", fg="silver")
 texto.pack(expand=YES, fill=BOTH)
 
-menu_topo = Menu(janela, bg="#424242", activebackground="#00ee76", fg="#00ee76")
+menu_topo = Menu(frame_texto, bg="#424242", activebackground="#00ee76", fg="#00ee76")
 janela.config(menu=menu_topo)
 
 file = Menu(menu_topo, bg="#00ee76", activebackground="#00ee76")
