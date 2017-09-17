@@ -68,9 +68,88 @@ def sair():
 def configu():
 
     # funções dos botões
+    # funções dos botões das cores das fontes
     def c_lightverde():
         texto["fg"] = "light green"
 
+    def c_verde_fraco():
+        texto["fg"] = "#00e581"
+
+    def c_verde_claro():
+        texto["fg"] = "#24ff00"
+
+    def c_azul_verde():
+         texto["fg"] = "#00c2df"
+
+    def c_azul_claro():
+        texto["fg"] = "#2500e0"
+
+    def c_roxo_claro():
+        texto["fg"] = "#8e00d8"
+
+    def c_amarelo_claro():
+        texto["fg"] = "#eaff00"
+
+    def c_laranja_claro():
+        texto["fg"] = "#ff5a00"
+
+    def c_vermelho_claro():
+        texto["fg"] = "#ff5f5f"
+
+    def c_preto():
+        texto["fg"] = "black"
+
+    def c_branco():
+        texto["fg"] = "white"
+
+    def c_prata():
+        texto["fg"] = "silver"
+
+    def c_sinza():
+        texto["fg"] = "#333333"
+
+     # funções dos botões das cores do fundo do editor
+    def c_lightverde_fundo():
+        texto["bg"] = "light green"
+
+    def c_verde_fraco_fundo():
+        texto["bg"] = "#00e581"
+
+    def c_verde_claro_fundo():
+        texto["bg"] = "#24ff00"
+
+    def c_azul_verde_fundo():
+        texto["bg"] = "#00c2df"
+
+    def c_azul_claro_fundo():
+        texto["bg"] = "#2500e0"
+
+    def c_roxo_claro_fundo():
+        texto["bg"] = "#8e00d8"
+
+    def c_amarelo_claro_fundo():
+        texto["bg"] = "#eaff00"
+
+    def c_laranja_claro_fundo():
+        texto["bg"] = "#ff5a00"
+
+    def c_vermelho_claro_fundo():
+        texto["bg"] = "#ff5f5f"
+
+    def c_preto_fundo():
+        texto["bg"] = "black"
+
+    def c_branco_fundo():
+        texto["bg"] = "white"
+
+    def c_prata_fundo():
+        texto["bg"] = "silver"
+
+    def c_sinza_fundo():
+        texto["bg"] = "#333333"
+
+
+    # janela
     window_config = Toplevel()
     window_config.geometry("500x500+300+100")
 
@@ -90,63 +169,67 @@ def configu():
     # Label dentro da janela
     lb_cor_font = Label(frame_cores, text="Configurações da fonte", pady=10, font=("arial", 12))
     lb_cor_font.pack()
-    lb_separador = Label(frame_cores, text="{:_<70}".format("_"), pady=10).pack()
-    lb_separator2 = Label(frame_cor_fundo, text="{:_<70}".format("_"), pady=10).pack()
-    lb_separator3 = Label(frame_fontes, text="{:_<70}".format("_")).pack()
+    lb_separador = Label(frame_cores, text="{:_<80}".format("_"), pady=10).pack()
+    lb_separator2 = Label(frame_cor_fundo, text="{:_<80}".format("_"), pady=10).pack()
+    lb_separator3 = Label(frame_fontes, text="{:_<80}".format("_")).pack()
 
     # Botões de cores da fonte
     lb_texto_font = Label(frame_cores, text="Cor da fonte: ").pack(side=LEFT)
     bt_lightverde = Button(frame_cores, width=0, bg="light green", activebackground="light green", command=c_lightverde)
     bt_lightverde.pack(side=LEFT)
-    bt_verde_fraco = Button(frame_cores, width=0, bg="#00e581", activebackground="#00e581", commnad=None)
+    bt_verde_fraco = Button(frame_cores, width=0, bg="#00e581", activebackground="#00e581", command=c_verde_fraco)
     bt_verde_fraco.pack(side=LEFT)
-    bt_verde_claro = Button(frame_cores, width=0, bg="#24ff00", activebackground="#24ff00", command=None)
+    bt_verde_claro = Button(frame_cores, width=0, bg="#24ff00", activebackground="#24ff00", command=c_verde_claro)
     bt_verde_claro.pack(side=LEFT)
-    bt_azul_verde = Button(frame_cores, width=0, bg="#00c2df", activebackground="#00c2df", command=None)
+    bt_azul_verde = Button(frame_cores, width=0, bg="#00c2df", activebackground="#00c2df", command=c_azul_verde)
     bt_azul_verde.pack(side=LEFT)
-    bt_azul_claro = Button(frame_cores, width=0, bg="#2500e0", activebackground="#2500e0", command=None)
+    bt_azul_claro = Button(frame_cores, width=0, bg="#2500e0", activebackground="#2500e0", command=c_azul_claro)
     bt_azul_claro.pack(side=LEFT)
-    bt_roxo_claro = Button(frame_cores, width=0, bg="#8e00d8", activebackground="#8e00d8", command=None)
+    bt_roxo_claro = Button(frame_cores, width=0, bg="#8e00d8", activebackground="#8e00d8", command=c_roxo_claro)
     bt_roxo_claro.pack(side=LEFT)
-    bt_amarelo_claro = Button(frame_cores, width=0, bg="#eaff00", activebackground="#eaff00", command=None)
+    bt_amarelo_claro = Button(frame_cores, width=0, bg="#eaff00", activebackground="#eaff00", command=c_amarelo_claro)
     bt_amarelo_claro.pack(side=LEFT)
-    bt_laranja_claro = Button(frame_cores, width=0, bg="#ff5a00", activebackground="#ff5a00", command=None)
+    bt_laranja_claro = Button(frame_cores, width=0, bg="#ff5a00", activebackground="#ff5a00", command=c_laranja_claro)
     bt_laranja_claro.pack(side=LEFT)
-    bt_vermelho_claro = Button(frame_cores, width=0, bg="#ff5f5f", activebackground="#ff5f5f", command=None)
+    bt_vermelho_claro = Button(frame_cores, width=0, bg="#ff5f5f", activebackground="#ff5f5f", command=c_vermelho_claro)
     bt_vermelho_claro.pack(side=LEFT)
-    bt_preto = Button(frame_cores, width=0, bg="black", activebackground="black", command=None)
+    bt_preto = Button(frame_cores, width=0, bg="black", activebackground="black", command=c_preto)
     bt_preto.pack(side=LEFT)
-    bt_branco = Button(frame_cores, width=0, bg="white", activebackground="white", command=None)
+    bt_branco = Button(frame_cores, width=0, bg="white", activebackground="white", command=c_branco)
     bt_branco.pack(side=LEFT)
-    bt_prata = Button(frame_cores, width=0, bg="silver", activebackground="silver", command=None)
+    bt_prata = Button(frame_cores, width=0, bg="silver", activebackground="silver", command=c_prata)
     bt_prata.pack(side=LEFT)
+    bt_sinza = Button(frame_cores, width=0, bg="#333333", activebackground="#333333", command=c_sinza)
+    bt_sinza.pack(side=LEFT)
 
     # Botões de cores de fundo
     lb_fundo_font = Label(frame_cor_fundo, text="Cor de fundo: ").pack(side=LEFT)
-    bt_lightverde2 = Button(frame_cor_fundo, width=0, bg="light green", activebackground="light green", command=None)
+    bt_lightverde2 = Button(frame_cor_fundo, width=0, bg="light green", activebackground="light green", command=c_lightverde_fundo)
     bt_lightverde2.pack(side=LEFT)
-    bt_verde_fraco2 = Button(frame_cor_fundo, width=0, bg="#00e581", activebackground="#00e581", commnad=None)
+    bt_verde_fraco2 = Button(frame_cor_fundo, width=0, bg="#00e581", activebackground="#00e581", command=c_verde_fraco_fundo)
     bt_verde_fraco2.pack(side=LEFT)
-    bt_verde_claro2 = Button(frame_cor_fundo, width=0, bg="#24ff00", activebackground="#24ff00", command=None)
+    bt_verde_claro2 = Button(frame_cor_fundo, width=0, bg="#24ff00", activebackground="#24ff00", command=c_verde_claro_fundo)
     bt_verde_claro2.pack(side=LEFT)
-    bt_azul_verde2 = Button(frame_cor_fundo, width=0, bg="#00c2df", activebackground="#00c2df", command=None)
+    bt_azul_verde2 = Button(frame_cor_fundo, width=0, bg="#00c2df", activebackground="#00c2df", command=c_azul_verde_fundo)
     bt_azul_verde2.pack(side=LEFT)
-    bt_azul_claro2 = Button(frame_cor_fundo, width=0, bg="#2500e0", activebackground="#2500e0", command=None)
+    bt_azul_claro2 = Button(frame_cor_fundo, width=0, bg="#2500e0", activebackground="#2500e0", command=c_azul_claro_fundo)
     bt_azul_claro2.pack(side=LEFT)
-    bt_roxo_claro2 = Button(frame_cor_fundo, width=0, bg="#8e00d8", activebackground="#8e00d8", command=None)
+    bt_roxo_claro2 = Button(frame_cor_fundo, width=0, bg="#8e00d8", activebackground="#8e00d8", command=c_roxo_claro_fundo)
     bt_roxo_claro2.pack(side=LEFT)
-    bt_amarelo_claro2 = Button(frame_cor_fundo, width=0, bg="#eaff00", activebackground="#eaff00", command=None)
+    bt_amarelo_claro2 = Button(frame_cor_fundo, width=0, bg="#eaff00", activebackground="#eaff00", command=c_amarelo_claro_fundo)
     bt_amarelo_claro2.pack(side=LEFT)
-    bt_laranja_claro2 = Button(frame_cor_fundo, width=0, bg="#ff5a00", activebackground="#ff5a00", command=None)
+    bt_laranja_claro2 = Button(frame_cor_fundo, width=0, bg="#ff5a00", activebackground="#ff5a00", command=c_laranja_claro_fundo)
     bt_laranja_claro2.pack(side=LEFT)
-    bt_vermelho_claro2 = Button(frame_cor_fundo, width=0, bg="#ff5f5f", activebackground="#ff5f5f", command=None)
+    bt_vermelho_claro2 = Button(frame_cor_fundo, width=0, bg="#ff5f5f", activebackground="#ff5f5f", command=c_vermelho_claro_fundo)
     bt_vermelho_claro2.pack(side=LEFT)
-    bt_preto2 = Button(frame_cor_fundo, width=0, bg="black", activebackground="black", command=None)
+    bt_preto2 = Button(frame_cor_fundo, width=0, bg="black", activebackground="black", command=c_preto_fundo)
     bt_preto2.pack(side=LEFT)
-    bt_branco2 = Button(frame_cor_fundo, width=0, bg="white", activebackground="white", command=None)
+    bt_branco2 = Button(frame_cor_fundo, width=0, bg="white", activebackground="white", command=c_branco_fundo)
     bt_branco2.pack(side=LEFT)
-    bt_prata2 = Button(frame_cor_fundo, width=0, bg="silver", activebackground="silver", command=None)
+    bt_prata2 = Button(frame_cor_fundo, width=0, bg="silver", activebackground="silver", command=c_prata_fundo)
     bt_prata2.pack(side=LEFT)
+    bt_sinza2 = Button(frame_cor_fundo, width=0, bg="#333333", activebackground="#333333", command=c_sinza_fundo)
+    bt_sinza2.pack(side=LEFT)
 
     window_config.mainloop()
 
