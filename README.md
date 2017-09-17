@@ -1,6 +1,8 @@
 # editor-de-texto-python
-Desenvolvimento de um editor de texto
+Criaço de um editor de texto personalizado.
 
-Um editor de texto simples mais de qualidade.
+Um editor simples mais de qualidade.
+
+Quem tiver alguma sugestão é só falar!
 
 # ainda em desenvolvimento
